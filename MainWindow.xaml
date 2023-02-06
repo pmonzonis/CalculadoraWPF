@@ -1,0 +1,59 @@
+﻿<Window x:Class="CalculadoraWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculadoraWPF"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="430" Width="380" BorderBrush="Black">
+    <Grid Background="#FFF3F3F3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Botons numeros-->
+
+        <Button x:Name="Button7" Grid.Row="1" Grid.Column="0" Click="Button7_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">7</Button>
+        <Button x:Name="Button8" Grid.Row="1" Grid.Column="1" Click="Button8_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">8</Button>
+        <Button x:Name="Button9" Grid.Row="1" Grid.Column="2" Click="Button9_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">9</Button>
+        <Button x:Name="Button4" Grid.Row="2" Grid.Column="0" Click="Button4_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">4</Button>
+        <Button x:Name="Button5" Grid.Row="2" Grid.Column="1" Click="Button5_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">5</Button>
+        <Button x:Name="Button6" Grid.Row="2" Grid.Column="2" Click="Button6_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">6</Button>
+        <Button x:Name="Button1" Grid.Row="3" Grid.Column="0" Click="Button1_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">1</Button>
+        <Button x:Name="Button2" Grid.Row="3" Grid.Column="1" Click="Button2_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">2</Button>
+        <Button x:Name="Button3" Grid.Row="3" Grid.Column="2" Click="Button3_Click" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">3</Button>
+        <Button x:Name="Button0" Grid.Row="4" Grid.Column="0" Click="Button_Click_1" FontSize="20" BorderThickness="1.5" Background="#FFDDDDDD">0</Button>
+
+        <!-- Botons matematics-->
+
+        <Button x:Name="ButtonDecimal" Grid.Row="4" Grid.Column="2" Click="ButtonDecimal_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">,</Button>
+        <Button x:Name="ButtonIgual" Grid.Row="4" Grid.Column="3" Click="ButtonIgual_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">=</Button>
+        <Button x:Name="ButtonResta" Grid.Row="3" Grid.Column="3" Click="ButtonResta_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">-</Button>
+        <Button x:Name="ButtonMultiplicacio" Grid.Row="2" Grid.Column="3" Click="ButtonMultiplicacio_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">*</Button>
+        <Button x:Name="ButtonDivisio" Grid.Row="1" Grid.Column="3" Click="ButtonDivisio_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">/</Button>
+        <Button x:Name="ButtonSuma" Grid.Row="3" Grid.Column="5" Grid.RowSpan="3" Click="Button_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">+</Button>
+
+        <!---Botons de netetja-->
+        <Button x:Name="ButtonBorrarTot" Grid.Row="1" Grid.Column="4" Click="ButtonBorrarTot_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">C</Button>
+        <Button x:Name="ButtonRetroceder" Grid.Row="2" Grid.Column="4" Content="&lt;-" Click="ButtonRetroceder_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8"/>
+
+        <!--Boto de canvi de signe-->
+        <Button x:Name="ButtonCanviSigne" Grid.Row="4" Grid.Column="1" Click="ButtonCanviSigne_Click" FontSize="20" BorderThickness="1.5" Background="#FFB4BCC8">+/-</Button>
+
+        <!--Boto pantalla text-->
+        <TextBox x:Name="Resultado" IsReadOnly="True" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="35" BorderThickness="5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" TextChanged="TextBox_TextChanged" Background="#FFF3F2F3" Height="69" Margin="0,0,1.333,0" BorderBrush="#FF0B0B0C"/>
+    </Grid>
+
+</Window>
